@@ -1,0 +1,122 @@
+﻿@page
+@using TutorialDemo.ViewModels
+@model IndexModel
+@{
+    var formFieldData = new Dictionary<string, string>
+    {
+        { "PointTopLeft", "1" },
+        { "PointUp", "2" },
+        { "PointTopRight", "3" },
+        { "PointLeft", "4" },
+        { "PointRight", "5" },
+        { "PointBottomLeft", "6" },
+        { "PointDown", "7" },
+        { "PointBottomRight", "8" }
+    };
+
+    var formFieldHeaders = new Dictionary<string, string>
+    {
+        { "PointTopLeft", "Step 1" },
+        { "PointUp", "Step 2" },
+        { "PointTopRight", "Step 3" },
+        { "PointLeft", "Step 4" },
+        { "PointRight", "Step 5" },
+        { "PointBottomLeft", "Step 6" },
+        { "PointDown", "Step 7" },
+        { "PointBottomRight", "Step 8" }
+    };
+
+    var descriptions = new Dictionary<string, string>
+    {
+        { "PointTopLeft", "This is step 1 where the top-left corner is highlighted. Use this to guide users to key actions located in the top-left corner of the screen." },
+        { "PointUp", "Step 2 focuses on the upward direction, pointing users to elements or features positioned directly above the current context." },
+        { "PointTopRight", "In step 3, the pointer highlights the top-right corner, usually for settings, profile options, or additional menu items." },
+        { "PointLeft", "Step 4 guides users to the left side of the interface, often used for navigation menus or main content." },
+        { "PointRight", "In step 5, the focus shifts to the right side, which might include secondary actions or contextual information." },
+        { "PointBottomLeft", "Step 6 draws attention to the bottom-left corner, commonly used for less prominent but important actions like help or feedback." },
+        { "PointDown", "Step 7 is about directing the user to elements located below, such as a footer or more details in a longer form." },
+        { "PointBottomRight", "Step 8 targets the bottom-right corner, a spot often reserved for actions like submitting a form or accessing quick tools." }
+    };
+
+    var hotspotClasses = new Dictionary<string, string>
+    {
+        { "PointTopLeft", "hotspot-bottom-right" },
+        { "PointUp", "hotspot-bottom-center" },
+        { "PointTopRight", "hotspot-bottom-left" },
+        { "PointLeft", "hotspot-center-right" },
+        { "PointRight", "hotspot-center-left" },
+        { "PointBottomLeft", "hotspot-top-right" },
+        { "PointDown", "hotspot-top-center" },
+        { "PointBottomRight", "hotspot-top-left" }
+    };
+
+    var gridItems = new string[9]
+    {
+        "PointTopLeft", "PointUp", "PointTopRight",
+        "PointLeft", null, "PointRight",
+        "PointBottomLeft", "PointDown", "PointBottomRight"
+    };
+
+}
+
+
+<link rel="stylesheet" href="~/css/styles.css" />
+
+<!--
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-12" id="col12">
+        <div class="comment-box" id="commentBox">
+            <div class="comment-header" id="commentHeader">Step 1</div>
+            <div class="comment-text" id="commentText">This is step 1 where the top-left corner is highlighted. Use this to guide users to key actions located in the top-left corner of the screen.</div>
+        </div>
+        <img id="image" src="~/Images/TrainingTooltips/TopLeft.png" alt="Photo1" class="photo">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4">
+            <button id="prevButton" onclick="changeContent('prev')">Previous</button>
+        </div>
+        <div class="col-4">
+            <button id="skipButton" onclick="changeContent('skip')">Skip</button>
+        </div>
+        <div class="col-4 ">
+            <button id="nextButton" onclick="changeContent('next')">Next</button>
+        </div>
+    </div>
+</div>
+
+-->
+<!-- Startボタン -->
+<button id="startBtn">Start</button>
+
+<!-- PopUp -->
+<div id="popup" class="popup" style="display: none;">
+    <div class="popup-content">
+        <!-- Carousel Slide -->
+        <div class="carousel-slide">
+            <div class="carousel-body">
+                <h2 class="header"></h2>
+                <p class="comment"></p>
+            </div>
+            <button class="prev-btn" onclick="changeSlide(-1)">Previous</button>
+            <div class="button-container">
+                <button class="skip-btn" onclick="skipSlide()">Skip</button>
+                <button class="next-btn" onclick="changeSlide(1)">Next</button>
+            </div>
+
+        </div>
+        
+        <!-- ImageBox -->
+        <div class="imagebox">
+            <img class="image" src="" alt="Image">
+        </div>
+
+        <!-- 吹き出しボックス -->
+        <div id ="bubble-box"class="bubble-box step-1">
+            <p class="bubble-text"></p>
+        </div>
+        
+    </div>
+</div>
+<script src="~/js/script.js"></script>

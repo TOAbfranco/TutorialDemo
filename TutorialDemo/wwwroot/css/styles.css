@@ -1,0 +1,172 @@
+﻿/* PopUp全体 */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* PopUp内容 */
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Slide */
+.carousel-slide {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 30%;
+    text-align: center;
+}
+
+.carousel-body {
+    padding: 20px;
+}
+
+/* ImageBox */
+.imagebox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    max-width: 500px;
+}
+
+/* 吹き出しボックス */
+.bubble-box {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 200px;
+}
+
+.bubble-text {
+    font-size: 14px;
+}
+
+.prev-btn21, .next-btn1, .skip-btn1 {
+    cursor: pointer;
+    padding: 100px 200px;
+    margin: 5px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.prev-btn, .next-btn, .skip-btn {
+    cursor: pointer;
+    padding: 10px 5%; /* Use percentage-based padding for responsiveness */
+    margin: 5px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 30%; /* Make buttons take a percentage of their container width */
+    min-width: 80px; /* Ensure buttons don't get too small */
+    max-width: 200px; /* Set an upper limit for button size */
+    font-size: 1rem; /* Adjust font size responsively */
+    z-index: 1;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers buttons horizontally */
+    gap: 10px; /* Adds spacing between buttons */
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+/* Step-Specific Positions */
+.step-12 {
+    top: 10%;
+    left: 90%;
+    transform: translate(125%, 440%);
+}
+
+.step-1 {
+    top: 10%;
+    left: 90%;
+    transform: translate(-350%, -80%);
+}
+
+.step-2 {
+    top: 10%;
+    left: 90%;
+    transform: translate(-5%, -140%);
+}
+
+.step-3 {
+    top: 10%;
+    left: 90%;
+    transform: translate(105%, -80%);
+}
+
+.step-4 {
+    top: 10%;
+    left: 90%;
+    transform: translate(-400%, 140%);
+}
+
+.step-5 {
+    top: 10%;
+    left: 90%;
+    transform: translate(195%, 150%);
+}
+
+.step-6 {
+    top: 10%;
+    left: 90%;
+    transform: translate(-355%, 400%);
+}
+
+.step-7 {
+    top: 10%;
+    left: 90%;
+    transform: translate(-55%, 450%);
+}
+
+.step-8 {
+    top: 10%;
+    left: 90%;
+    transform: translate(125%, 440%);
+}
+
+@media (max-width: 600px) {
+    .popup-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .speech-bubble {
+        left: 10px;
+        top: auto;
+        bottom: 10px;
+    }
+}

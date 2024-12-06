@@ -1,0 +1,157 @@
+﻿.hotspot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    z-index: 1500;
+}
+
+.parent-container {
+    position: relative;
+    /* Other styles */
+}
+
+.hotspot-bottom-center {
+    transform: translate(-50%, 0%);
+    bottom: 0;
+    left: 50%;
+}
+
+.hotspot-bottom-left {
+    transform: translate(0, 0%);
+    bottom: 0;
+    left: 0;
+}
+
+.hotspot-center-left {
+    transform: translate(0%, -50%);
+    left: 0;
+    top: 50%;
+}
+
+.hotspot-top-left {
+    transform: translate(0, -100%);
+    top: 0;
+    left: 0;
+}
+
+.hotspot-top-center {
+    transform: translate(-50%, -100%);
+    top: 0;
+    left: 50%;
+}
+
+.hotspot-top-right {
+    transform: translate(-100%, -100%);
+    top: 0;
+    right: 0;
+}
+
+.hotspot-center-right {
+    transform: translate(0%, -50%);
+    right: 0;
+    top: 50%;
+}
+
+.hotspot-bottom-right {
+    transform: translate(-100%, 0%);
+    bottom: 0;
+    right: 0;
+}
+
+/* Modal Styling */
+#tutorialModal {
+    position: absolute; /* Absolute positioning for dynamic placement */
+    width: 400px; /* Adjust as needed */
+    max-width: 90%;
+    background-color: var(--modal-bg-color, white);
+    color: var(--modal-text-color, black);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1600; /* Above hotspots */
+    display: none; /* Hidden by default */
+    border-radius: 10px;
+    transition: top 0.3s ease, left 0.3s ease; /* Smooth positioning */
+}
+
+#tutorialModal img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Modal Content Styling */
+.modal-content {
+    position: relative;
+    padding: 20px;
+    background-color: inherit; /* Inherit from #tutorialModal */
+    color: inherit; /* Inherit from #tutorialModal */
+    border-radius: 10px;
+}
+
+/* Close Button Styling */
+.tutorial-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: inherit; /* Inherit from #tutorialModal */
+}
+
+    .tutorial-close-button:hover,
+    .tutorial-close-button:focus {
+        color: black; /* Optional: Change color on hover/focus */
+        text-decoration: none;
+    }
+
+/* Speech Bubble Styling */
+.speech-bubble {
+    position: relative; /* Necessary for absolute positioning of SVG */
+    background: transparent; /* Background handled by SVG */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Padding handled by SVG */
+    z-index: 1700; /* Above modal */
+}
+
+.speech-bubble svg {
+    width: 100%;
+    height: auto;
+}
+
+/* 吹き出しのスタイル */
+.comment-box {
+    position: relative; /* 吹き出しの三角形を絶対位置で配置するため */
+    background-color: #f1f1f1; /* 吹き出しの背景色 */
+    border: 1px solid #ccc; /* 吹き出しの枠線 */
+    border-radius: 10px; /* 角を丸くする */
+    padding: 10px;
+    width: 250px; /* 吹き出しの幅 */
+}
+
+.comment-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* 吹き出しの三角形部分 */
+.comment-box::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* 吹き出しの下端に位置させる */
+    left: 20px; /* 吹き出しの中の位置調整 */
+    border-width: 10px;
+    border-style: solid;
+    border-color: #f1f1f1 transparent transparent transparent; /* 吹き出しの色に合わせる */
+}
