@@ -90,22 +90,43 @@
 <!-- Startボタン -->
 <button id="startBtn">Start</button>
 
+<div class="carousel carousel-dark slide">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
 <!-- PopUp -->
 <div id="popup" class="popup" style="display: none;">
     <div class="popup-content">
         <!-- Carousel Slide -->
         <div class="carousel-slide">
-            <div class="carousel-body">
-                <h2 class="header"></h2>
-                <p class="comment"></p>
-            </div>
-            <button class="prev-btn" onclick="changeSlide(-1)">Previous</button>
-            <div class="button-container">
-                <button class="skip-btn" onclick="skipSlide()">Skip</button>
-                <button class="next-btn" onclick="changeSlide(1)">Next</button>
-            </div>
+            <!-- Carousel Slide -->
+            <div class="carousel-slide">
 
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-body">
+                                <h2 class="header"></h2>
+                                <p class="comment"></p>
+                                <button class="skip-btn" onclick="skipSlide()">Skip</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
         </div>
+            <a class="carousel-control-prev"
+               href="#GFG"
+               data-slide="prev" onclick="changeSlide(-1)">
+                <span class="carousel-control-prev-icon">
+                </span>
+            </a>
+            <a class="carousel-control-next"
+               href="#GFG"
+               data-slide="next" onclick="changeSlide(1)" >
+                <span class="carousel-control-next-icon">
+                </span>
+            </a>
+        </div> 
         
         <!-- ImageBox -->
         <div class="imagebox">

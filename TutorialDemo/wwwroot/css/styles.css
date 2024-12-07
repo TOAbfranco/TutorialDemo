@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,49 +113,54 @@
 .step-1 {
     top: 10%;
     left: 90%;
-    transform: translate(-350%, -80%);
+    transform: translate(-720%, -80%);
 }
 
 .step-2 {
     top: 10%;
     left: 90%;
-    transform: translate(-5%, -140%);
+    transform: translate(-325%, -140%);
 }
 
 .step-3 {
     top: 10%;
     left: 90%;
-    transform: translate(105%, -80%);
+    transform: translate(-200%, -80%);
 }
 
 .step-4 {
     top: 10%;
     left: 90%;
-    transform: translate(-400%, 140%);
+    transform: translate(-850%, 200%);
 }
 
 .step-5 {
     top: 10%;
     left: 90%;
-    transform: translate(195%, 150%);
+    transform: translate(-65%, 205%);
 }
 
 .step-6 {
     top: 10%;
     left: 90%;
-    transform: translate(-355%, 400%);
+    transform: translate(-755%, 450%);
 }
 
 .step-7 {
     top: 10%;
     left: 90%;
-    transform: translate(-55%, 450%);
+    transform: translate(-370%, 530%);
 }
 
 .step-8 {
     top: 10%;
     left: 90%;
-    transform: translate(125%, 440%);
+    transform: translate(-185%, 520%);
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
 }
 
 @media (max-width: 600px) {
